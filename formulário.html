@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva - Dream Routes</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .form-section {
+      background: linear-gradient(135deg, #acbcb3 0%, #7a9484 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    
+    .form-container {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 600px;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .form-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(90deg, #56705e 0%, #acbcb3 100%);
+    }
+    
+    .form-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #56705e;
+      font-size: 2rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+    
+    .form-title::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: #7a9484;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #56705e;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #7a9484;
+      box-shadow: 0 0 0 3px rgba(122, 148, 132, 0.2);
+      outline: none;
+    }
+    
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(to right, #56705e, #7a9484);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .submit-btn:hover {
+      background: linear-gradient(to right, #7a9484, #56705e);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .decoration {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgba(122, 148, 132, 0.1);
+      border-radius: 50%;
+    }
+    
+    .decoration-1 {
+      top: -30px;
+      right: -30px;
+    }
+    
+    .decoration-2 {
+      bottom: -40px;
+      left: -40px;
+      width: 150px;
+      height: 150px;
+    }
+  </style>
+</head>
+<body>
+  <section class="form-section">
+    <div class="form-container">
+      <div class="decoration decoration-1"></div>
+      <div class="decoration decoration-2"></div>
+      
+      <h2 class="form-title">Reserve sua viagem</h2>
+      <form id="reservaForm">
+        <div class="form-group">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="seu@email.com">
+        </div>
+        
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000">
+        </div>
+        
+        <div class="form-group">
+          <label for="destino">Destino desejado</label>
+          <select id="destino" name="destino" required>
+            <option value="">Selecione um destino</option>
+            <option value="Japão">Japão</option>
+            <option value="Grécia">Grécia</option>
+            <option value="Fernando de Noronha">Fernando de Noronha</option>
+            <option value="Capadócia">Capadócia</option>
+            <option value="Peru">Peru</option>
+            <option value="Paris">Paris</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="plano">Plano desejado</label>
+          <select id="plano" name="plano" required>
+            <option value="">Selecione um plano</option>
+            <option value="Plano básico - $100">Plano básico - $100</option>
+            <option value="Melhor valor - $150">Melhor valor - $150</option>
+            <option value="Exclusivo - $250">Exclusivo - $250</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="mensagem">Mensagem adicional</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Alguma informação adicional ou preferências especiais..."></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Enviar Reserva</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
