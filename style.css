@@ -11,7 +11,6 @@ body {
   background-color: #f9f9f9;
 }
 
-/* Header compacto */
 .header-compact {
   display: flex;
   justify-content: space-between;
@@ -84,7 +83,6 @@ nav a:hover {
   text-align: left; 
 }
 
-/* Ajustes na galeria */
 .galeria-destinos {
   flex: 3.5; 
   display: flex;
@@ -120,7 +118,6 @@ nav a:hover {
   font-weight: 600;
 }
 
-/* Seções comuns */
 .melhor-destino, .planos {
   padding: 4rem 5%;
   text-align: center;
@@ -139,7 +136,6 @@ h2 {
   color: #555;
 }
 
-/* Cards de destinos */
 .destinos-container {
   display: flex;
   justify-content: center;
