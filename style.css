@@ -1,5 +1,4 @@
-/* Reset e estilos globais */
-* {
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -70,10 +69,9 @@ nav a:hover {
   border-radius: 8px;
 }
 
-/* Novo container para texto + galeria */
 .banner-content {
   display: flex;
-  align-items: flex-start; /* Alinha no topo */
+  align-items: flex-start; 
   gap: 2rem;
   margin-top: 2rem;
   max-width: 1200px;
@@ -82,13 +80,13 @@ nav a:hover {
 }
 
 .banner-text {
-  flex: 2; /* Ocupa mais espaço que a galeria */
-  text-align: left; /* Texto alinhado à esquerda */
+  flex: 2; 
+  text-align: left; 
 }
 
 /* Ajustes na galeria */
 .galeria-destinos {
-  flex: 3.5; /* Ocupa menos espaço que o texto */
+  flex: 3.5; 
   display: flex;
   gap: 15px;
 }
@@ -102,7 +100,7 @@ nav a:hover {
 
 .destino-galeria img {
   width: 200%;
-  height: 200px; /* Altura menor que a do banner */
+  height: 200px; 
   object-fit: cover;
   transition: transform 0.3s;
 }
